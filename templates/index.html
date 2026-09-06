@@ -102,6 +102,14 @@ Projects
 Journey
 </a>
 
+<a href="#resume">
+Resume
+</a>
+
+<a href="#certificates">
+Certificates
+</a>
+
 <a href="#contact">
 Contact
 </a>
@@ -704,47 +712,6 @@ View GitHub ↗
 </div>
 
 
-<section id="resume" class="section">
-    <div class="section-heading">
-        <span class="eyebrow">MY RESUME</span>
-        <h2>My Resume</h2>
-        <p>
-            Want to know more about my education, skills and experience?
-            Check out my resume.
-        </p>
-    </div>
-
-    <div class="resume-card">
-        <div>
-            <span class="resume-icon">📄</span>
-            <h3>Smit Raval — Resume</h3>
-            <p>
-                Education, technical skills, projects and professional profile.
-            </p>
-        </div>
-
-        <div class="resume-actions">
-            <a
-                href="{{ url_for('static', filename='resume.pdf') }}"
-                target="_blank"
-                class="btn"
-            >
-                View Resume ↗
-            </a>
-
-            <a
-                href="{{ url_for('static', filename='resume.pdf') }}"
-                download="Smit_Raval_Resume.pdf"
-                class="btn secondary"
-            >
-                Download Resume ↓
-            </a>
-        </div>
-    </div>
-</section>
-
-
-
 <!-- FEATURED PROJECT -->
 
 <article
@@ -1175,6 +1142,201 @@ Deepen full-stack development, databases, deployment and software engineering pr
 
 
 
+<!-- ================= RESUME ================= -->
+
+<section
+class="section wrap"
+id="resume"
+>
+
+    <div class="kicker">
+        05 / RESUME
+    </div>
+
+    <div class="head reveal">
+        <div>
+            <h2>
+                My
+                <em>resume.</em>
+            </h2>
+
+            <p>
+                A quick overview of my education, technical skills,
+                projects and professional profile.
+            </p>
+        </div>
+    </div>
+
+    <div class="resume-card reveal">
+
+        <div class="resume-info">
+
+            <div class="resume-icon" aria-hidden="true">
+                📄
+            </div>
+
+            <div>
+                <h3>Smit Raval — Resume</h3>
+
+                <p>
+                    Education, technical skills, projects and professional profile.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="resume-actions">
+
+            <a
+            href="{{ url_for('static', filename='resume.pdf') }}"
+            target="_blank"
+            rel="noopener"
+            class="btn primary"
+            >
+                View Resume ↗
+            </a>
+
+            <a
+            href="{{ url_for('static', filename='resume.pdf') }}"
+            download="Smit_Raval_Resume.pdf"
+            class="btn secondary"
+            >
+                Download Resume ↓
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATES ================= -->
+
+<section
+class="section wrap"
+id="certificates"
+>
+
+    <div class="kicker">
+        06 / CERTIFICATES
+    </div>
+
+    <div class="head reveal">
+        <div>
+            <h2>
+                My
+                <em>certificates.</em>
+            </h2>
+
+            <p>
+                Certificates and achievements from my learning journey.
+            </p>
+        </div>
+    </div>
+
+    <div class="certificate-grid">
+
+        <article class="certificate-card reveal">
+
+            <a
+            href="{{ url_for('static', filename='certificates/certificate-1.jpg') }}"
+            target="_blank"
+            rel="noopener"
+            >
+                <img
+                class="certificate-image"
+                src="{{ url_for('static', filename='certificates/certificate-1.jpg') }}"
+                alt="Smit Raval certificate 1"
+                loading="lazy"
+                >
+            </a>
+
+            <h3>Certificate 1</h3>
+
+            <p>
+                Click the certificate to view it full size.
+            </p>
+
+        </article>
+
+
+        <article class="certificate-card reveal">
+
+            <a
+            href="{{ url_for('static', filename='certificates/certificate-2.jpg') }}"
+            target="_blank"
+            rel="noopener"
+            >
+                <img
+                class="certificate-image"
+                src="{{ url_for('static', filename='certificates/certificate-2.jpg') }}"
+                alt="Smit Raval certificate 2"
+                loading="lazy"
+                >
+            </a>
+
+            <h3>Certificate 2</h3>
+
+            <p>
+                Click the certificate to view it full size.
+            </p>
+
+        </article>
+
+
+        <article class="certificate-card reveal">
+
+            <a
+            href="{{ url_for('static', filename='certificates/certificate-3.jpg') }}"
+            target="_blank"
+            rel="noopener"
+            >
+                <img
+                class="certificate-image"
+                src="{{ url_for('static', filename='certificates/certificate-3.jpg') }}"
+                alt="Smit Raval certificate 3"
+                loading="lazy"
+                >
+            </a>
+
+            <h3>Certificate 3</h3>
+
+            <p>
+                Click the certificate to view it full size.
+            </p>
+
+        </article>
+
+
+        <article class="certificate-card reveal">
+
+            <a
+            href="{{ url_for('static', filename='certificates/certificate-4.jpg') }}"
+            target="_blank"
+            rel="noopener"
+            >
+                <img
+                class="certificate-image"
+                src="{{ url_for('static', filename='certificates/certificate-4.jpg') }}"
+                alt="Smit Raval certificate 4"
+                loading="lazy"
+                >
+            </a>
+
+            <h3>Certificate 4</h3>
+
+            <p>
+                Click the certificate to view it full size.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
 <!-- ================= CONTACT ================= -->
 
 <section
@@ -1187,7 +1349,7 @@ id="contact"
 
 
 <div class="kicker">
-05 / CONTACT
+07 / CONTACT
 </div>
 
 
