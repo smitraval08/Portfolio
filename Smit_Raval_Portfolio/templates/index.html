@@ -13,11 +13,16 @@ content="width=device-width, initial-scale=1"
 
 <meta
 name="description"
-content="Smit Raval — MCA student, developer and web technology enthusiast."
+content="Smit Raval — MCA student, developer and builder. Portfolio, projects, skills, education and contact."
+>
+
+<meta
+name="theme-color"
+content="#06101c"
 >
 
 <title>
-Smit Raval | MCA Student & Developer
+Smit Raval — Developer Portfolio
 </title>
 
 <link
@@ -46,21 +51,40 @@ href="{{ url_for('static', filename='style.css') }}"
 
 <body>
 
+
+<div
+class="progress"
+id="progress"
+></div>
+
+
 <div class="noise"></div>
 
 
-<header class="nav">
+
+<!-- ================= NAVBAR ================= -->
+
+<header
+class="nav"
+id="top"
+>
 
 <a
 class="logo"
 href="#home"
 >
+
 <span></span>
+
 SMIT RAVAL
+
 </a>
 
 
-<nav id="nav">
+<nav
+id="nav"
+aria-label="Primary navigation"
+>
 
 <a href="#about">
 About
@@ -74,8 +98,8 @@ Skills
 Projects
 </a>
 
-<a href="#education">
-Education
+<a href="#journey">
+Journey
 </a>
 
 <a href="#contact">
@@ -85,20 +109,32 @@ Contact
 </nav>
 
 
+<div class="nav-actions">
+
 <a
 class="top-btn"
 href="#contact"
 >
-Let's Connect ↗
+
+Let's Connect
+
+<span>↗</span>
+
 </a>
 
 
 <button
 class="menu"
 id="menu"
+aria-label="Open navigation"
+aria-expanded="false"
 >
+
 ☰
+
 </button>
+
+</div>
 
 </header>
 
@@ -107,14 +143,16 @@ id="menu"
 <main>
 
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 
 <section
 class="hero wrap"
 id="home"
 >
 
-<div class="hero-copy">
+
+<div class="hero-copy reveal">
+
 
 <div class="status">
 
@@ -128,10 +166,14 @@ MCA • 1ST SEMESTER • DEVELOPER
 <h1>
 
 Turning curiosity
+
 <br>
 
 into
-<em>code.</em>
+
+<em>
+code.
+</em>
 
 </h1>
 
@@ -140,12 +182,13 @@ into
 
 I'm
 <b>Smit Raval</b>,
-an MCA student from Ahmedabad with a hands-on interest in web development, programming and practical software projects.
+an MCA student from Ahmedabad who enjoys turning ideas into practical web experiences and learning by building.
 
 </p>
 
 
 <div class="actions">
+
 
 <a
 class="btn primary"
@@ -168,14 +211,18 @@ Get In Touch
 
 </a>
 
+
 </div>
 
 
 <div class="stats">
 
+
 <div>
 
-<strong>MCA</strong>
+<strong>
+MCA
+</strong>
 
 <small>
 1st Semester
@@ -186,10 +233,12 @@ Get In Touch
 
 <div>
 
-<strong>10+</strong>
+<strong>
+9+
+</strong>
 
 <small>
-Technologies listed
+Core technologies
 </small>
 
 </div>
@@ -197,46 +246,124 @@ Technologies listed
 
 <div>
 
-<strong>5</strong>
+<strong>
+5+
+</strong>
 
 <small>
-Public GitHub repos
+Public projects
 </small>
 
 </div>
 
-</div>
 
 </div>
 
 
+</div>
 
-<div class="hero-art">
 
-<div class="halo"></div>
+
+<div class="hero-art reveal">
+
+
+<div class="orb orb-a"></div>
+
+<div class="orb orb-b"></div>
 
 
 <div class="portrait">
 
+
 <img
 src="{{ url_for('static', filename='profile.png') }}"
-alt="Smit Raval professional portrait"
+alt="Smit Raval profile portrait"
 >
 
-</div>
+
+<div class="portrait-shade"></div>
+
+
+<div class="portrait-label">
+
+<span>
+AVAILABLE TO LEARN
+</span>
+
+<b>
+BUILD • SHIP • IMPROVE
+</b>
 
 </div>
+
+
+</div>
+
+
+
+<div class="floating-card card-one">
+
+
+<span class="mini-icon">
+&lt;/&gt;
+</span>
+
+
+<div>
+
+<b>
+Web Development
+</b>
+
+<small>
+Frontend + backend
+</small>
+
+</div>
+
+
+</div>
+
+
+
+<div class="floating-card card-two">
+
+
+<span class="mini-icon">
+DB
+</span>
+
+
+<div>
+
+<b>
+Problem Solving
+</b>
+
+<small>
+Practical projects
+</small>
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 
 <section
 class="section wrap"
 id="about"
 >
+
 
 <div class="kicker">
 01 / ABOUT ME
@@ -244,6 +371,10 @@ id="about"
 
 
 <div class="split">
+
+
+<div class="reveal">
+
 
 <h2>
 
@@ -258,26 +389,29 @@ Developer in progress.
 </h2>
 
 
-<div class="copy">
+</div>
+
+
+
+<div class="copy reveal">
+
 
 <p>
 
 I'm currently pursuing my
+
 <b>
 Master of Computer Applications (MCA)
 </b>
-and building on a foundation in computer science, web development and programming.
+
+and building on a foundation in computer science, programming and web development.
 
 </p>
 
 
 <p>
 
-My work includes a
-<b>
-Web-based Civic Issue Reporting and Tracking System
-</b>,
-along with programming and web-development tutorial content on YouTube.
+I like learning through real projects — from responsive interfaces to database-backed applications — while improving code quality and user experience.
 
 </p>
 
@@ -288,33 +422,100 @@ along with programming and web-development tutorial content on YouTube.
 
 </div>
 
-</div>
 
 </div>
+
+
+</div>
+
+
+
+<div class="about-grid">
+
+
+<div class="info-card reveal">
+
+<span>
+01
+</span>
+
+<b>
+Build with purpose
+</b>
+
+<p>
+Projects are a way to turn concepts into working software.
+</p>
+
+</div>
+
+
+
+<div class="info-card reveal">
+
+<span>
+02
+</span>
+
+<b>
+Keep learning
+</b>
+
+<p>
+Continuously improving programming, web and database skills.
+</p>
+
+</div>
+
+
+
+<div class="info-card reveal">
+
+<span>
+03
+</span>
+
+<b>
+Stay practical
+</b>
+
+<p>
+Focused on useful interfaces, clean structure and real-world workflows.
+</p>
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- SKILLS -->
+<!-- ================= SKILLS ================= -->
 
 <section
 class="section wrap"
 id="skills"
 >
 
+
 <div class="kicker">
 02 / SKILLS
 </div>
 
 
-<div class="head">
+<div class="head reveal">
+
 
 <div>
+
 
 <h2>
 
 My
+
 <em>
 toolkit
 </em>
@@ -324,78 +525,153 @@ toolkit
 
 <p>
 
-Technologies listed in my current CV.
+Technologies I currently work with and continue to develop.
 
 </p>
 
-</div>
 
 </div>
 
 
-<div class="skill-cloud">
+</div>
+
+
+
+<div class="skill-cloud reveal">
+
 
 <div class="skill hot">
 HTML
 </div>
 
-<div class="skill">
+
+<div class="skill hot">
 CSS
 </div>
+
 
 <div class="skill">
 JavaScript
 </div>
 
+
 <div class="skill">
 C
 </div>
+
 
 <div class="skill">
 C++
 </div>
 
+
 <div class="skill">
 Java
 </div>
+
 
 <div class="skill">
 PHP
 </div>
 
+
 <div class="skill hot">
 Python
 </div>
+
 
 <div class="skill hot">
 MySQL
 </div>
 
+
+<div class="skill">
+Git & GitHub
 </div>
+
+
+<div class="skill">
+Responsive Design
+</div>
+
+
+</div>
+
+
+
+<div class="skill-bars reveal">
+
+
+<div>
+
+<span>
+Frontend Development
+</span>
+
+<b>
+HTML • CSS • JavaScript
+</b>
+
+</div>
+
+
+<div>
+
+<span>
+Backend Development
+</span>
+
+<b>
+Python • Flask • PHP
+</b>
+
+</div>
+
+
+<div>
+
+<span>
+Database
+</span>
+
+<b>
+MySQL
+</b>
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- PROJECTS -->
+<!-- ================= PROJECTS ================= -->
 
 <section
 class="section wrap"
 id="projects"
 >
 
+
 <div class="kicker">
 03 / PROJECTS
 </div>
 
 
-<div class="head row">
+
+<div class="head row reveal">
+
 
 <div>
+
 
 <h2>
 
 Selected
+
 <em>
 work
 </em>
@@ -405,11 +681,13 @@ work
 
 <p>
 
-CV project + public GitHub work.
+A mix of academic, practical and public GitHub work.
 
 </p>
 
+
 </div>
+
 
 
 <a
@@ -423,11 +701,17 @@ View GitHub ↗
 
 </a>
 
+
 </div>
 
 
 
-<article class="feature">
+<!-- FEATURED PROJECT -->
+
+<article
+class="feature reveal"
+>
+
 
 <div class="number">
 01
@@ -435,17 +719,22 @@ View GitHub ↗
 
 
 <div class="tags">
-
 WEB DEVELOPMENT • DATABASE
-
 </div>
 
 
 <div class="feature-body">
 
+
+<div class="project-badge">
+FEATURED PROJECT
+</div>
+
+
 <h3>
 
 Web-based Civic Issue
+
 <br>
 
 Reporting & Tracking System
@@ -455,37 +744,46 @@ Reporting & Tracking System
 
 <p>
 
-A web-based platform designed to help citizens report and track local civic issues, with a focus on improving communication between the public and administrative authorities.
+A web platform designed to help citizens report and track local civic issues, with an emphasis on clear reporting, status visibility and communication.
 
 </p>
 
 
 <div class="feature-points">
 
+
 <span>
 ✓ User-friendly reporting
 </span>
+
 
 <span>
 ✓ Issue status tracking
 </span>
 
+
 <span>
-✓ Public–authority communication
+✓ Database integration
 </span>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 </article>
 
 
 
+<!-- GITHUB PROJECTS -->
+
 <div class="repo-grid">
 
 
-<article class="repo">
+<article class="repo reveal">
+
 
 <span class="repo-no">
 02
@@ -503,7 +801,7 @@ Electrical_Service
 
 
 <p>
-Public GitHub project in PHP.
+Public GitHub project built with PHP.
 </p>
 
 
@@ -517,11 +815,13 @@ Open repository ↗
 
 </a>
 
+
 </article>
 
 
 
-<article class="repo">
+<article class="repo reveal">
+
 
 <span class="repo-no">
 03
@@ -539,7 +839,7 @@ ele_service
 
 
 <p>
-Electronic service website using PHP + MySQL.
+Electronic service website using PHP and MySQL.
 </p>
 
 
@@ -553,11 +853,13 @@ Open repository ↗
 
 </a>
 
+
 </article>
 
 
 
-<article class="repo">
+<article class="repo reveal">
+
 
 <span class="repo-no">
 04
@@ -589,11 +891,13 @@ Open repository ↗
 
 </a>
 
+
 </article>
 
 
 
-<article class="repo">
+<article class="repo reveal">
+
 
 <span class="repo-no">
 05
@@ -625,11 +929,13 @@ Open repository ↗
 
 </a>
 
+
 </article>
 
 
 
-<article class="repo wide">
+<article class="repo wide reveal">
+
 
 <span class="repo-no">
 06
@@ -661,30 +967,38 @@ Open repository ↗
 
 </a>
 
+
 </article>
 
 
 </div>
 
+
 </section>
 
 
 
-<!-- EDUCATION -->
+<!-- ================= JOURNEY ================= -->
 
 <section
 class="section wrap"
-id="education"
+id="journey"
 >
 
+
 <div class="kicker">
-04 / EDUCATION
+04 / JOURNEY
 </div>
+
+
+
+<div class="journey-head reveal">
 
 
 <h2>
 
 Learning with
+
 <em>
 purpose.
 </em>
@@ -692,16 +1006,35 @@ purpose.
 </h2>
 
 
-<div class="education-card">
+<p>
 
-<div class="edu-year">
+Where I'm building my foundation and what I'm working toward next.
+
+</p>
+
+
+</div>
+
+
+
+<div class="timeline">
+
+
+<div class="timeline-item reveal">
+
+
+<div class="dot"></div>
+
+
+<div class="time">
 CURRENT
 </div>
 
 
 <div>
 
-<span class="edu-badge">
+
+<span class="badge">
 MCA
 </span>
 
@@ -715,50 +1048,109 @@ Master of Computer Applications
 1st Semester • Currently pursuing
 </p>
 
-</div>
 
 </div>
 
 
+</div>
 
-<div class="education-card muted">
 
-<div class="edu-year">
+
+<div class="timeline-item reveal">
+
+
+<div class="dot"></div>
+
+
+<div class="time">
 PREVIOUS
 </div>
 
 
 <div>
 
+
+<span class="badge muted-badge">
+BCA
+</span>
+
+
 <h3>
-GLS University — BCA
+GLS University — Bachelor of Computer Applications
 </h3>
 
 
 <p>
-Undergraduate education listed on supplied CV.
+Undergraduate education
 </p>
 
-</div>
 
 </div>
+
+
+</div>
+
+
+
+<div class="timeline-item reveal">
+
+
+<div class="dot"></div>
+
+
+<div class="time">
+NEXT
+</div>
+
+
+<div>
+
+
+<span class="badge">
+GOAL
+</span>
+
+
+<h3>
+More real-world projects
+</h3>
+
+
+<p>
+
+Deepen full-stack development, databases, deployment and software engineering practices.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
 
 </section>
 
 
 
-<!-- CONTACT -->
+<!-- ================= CONTACT ================= -->
 
 <section
 class="section wrap"
 id="contact"
 >
 
-<div class="contact-box">
+
+<div class="contact-box reveal">
+
 
 <div class="kicker">
 05 / CONTACT
 </div>
+
 
 
 <div class="contact-grid">
@@ -766,12 +1158,15 @@ id="contact"
 
 <div>
 
+
 <h2>
 
 Let's connect
+
 <br>
 
 & build
+
 <em>
 something.
 </em>
@@ -786,13 +1181,16 @@ For projects, learning opportunities or collaboration, feel free to reach out.
 </p>
 
 
+
 <div class="socials">
 
 
 <a
 href="mailto:smitraval812@gmail.com"
 >
+
 Email ↗
+
 </a>
 
 
@@ -801,7 +1199,9 @@ href="https://github.com/smitraval08"
 target="_blank"
 rel="noopener"
 >
+
 GitHub ↗
+
 </a>
 
 
@@ -810,7 +1210,9 @@ href="https://www.linkedin.com/in/smit-raval-785963291"
 target="_blank"
 rel="noopener"
 >
+
 LinkedIn ↗
+
 </a>
 
 
@@ -819,11 +1221,14 @@ href="https://www.youtube.com/@smitraval5501"
 target="_blank"
 rel="noopener"
 >
+
 YouTube ↗
+
 </a>
 
 
 </div>
+
 
 </div>
 
@@ -850,6 +1255,7 @@ action="{{ url_for('contact') }}"
 {% endwith %}
 
 
+
 <label>
 
 Name
@@ -857,10 +1263,13 @@ Name
 <input
 name="name"
 required
+maxlength="100"
+autocomplete="name"
 placeholder="Your name"
 >
 
 </label>
+
 
 
 <label>
@@ -871,10 +1280,13 @@ Email
 type="email"
 name="email"
 required
+maxlength="160"
+autocomplete="email"
 placeholder="you@example.com"
 >
 
 </label>
+
 
 
 <label>
@@ -883,10 +1295,12 @@ Subject
 
 <input
 name="subject"
+maxlength="180"
 placeholder="What's this about?"
 >
 
 </label>
+
 
 
 <label>
@@ -897,10 +1311,12 @@ Message
 name="message"
 rows="5"
 required
+maxlength="3000"
 placeholder="Write your message..."
 ></textarea>
 
 </label>
+
 
 
 <button
@@ -908,24 +1324,35 @@ class="btn primary"
 type="submit"
 >
 
-Send Message ↗
+Send Message
+
+<span>
+↗
+</span>
 
 </button>
 
 
 </form>
 
-</div>
 
 </div>
+
+
+</div>
+
 
 </section>
+
 
 </main>
 
 
 
+<!-- ================= FOOTER ================= -->
+
 <footer class="wrap">
+
 
 <span>
 © 2026 SMIT RAVAL
@@ -937,9 +1364,10 @@ MCA • DEVELOPER • LEARNER
 </span>
 
 
-<a href="#home">
+<a href="#top">
 Back to top ↑
 </a>
+
 
 </footer>
 
@@ -947,29 +1375,121 @@ Back to top ↑
 
 <script>
 
+
 const menu =
 document.getElementById("menu");
+
 
 const nav =
 document.getElementById("nav");
 
 
+const progress =
+document.getElementById("progress");
+
+
+
 menu.addEventListener(
 "click",
-() => nav.classList.toggle("open")
+() => {
+
+const open =
+nav.classList.toggle("open");
+
+menu.setAttribute(
+"aria-expanded",
+open
 );
+
+}
+);
+
 
 
 document
 .querySelectorAll("#nav a")
 .forEach(
+
 a =>
+
 a.addEventListener(
 "click",
-() =>
-nav.classList.remove("open")
-)
+() => {
+
+nav.classList.remove("open");
+
+menu.setAttribute(
+"aria-expanded",
+"false"
 );
+
+}
+)
+
+);
+
+
+
+window.addEventListener(
+"scroll",
+() => {
+
+const height =
+document.documentElement.scrollHeight -
+window.innerHeight;
+
+const percentage =
+height
+?
+(window.scrollY / height) * 100
+:
+0;
+
+progress.style.width =
+percentage + "%";
+
+}
+);
+
+
+
+const observer =
+new IntersectionObserver(
+
+entries => {
+
+entries.forEach(
+entry => {
+
+if (
+entry.isIntersecting
+) {
+
+entry.target.classList.add(
+"visible"
+);
+
+}
+
+}
+);
+
+},
+
+{
+threshold: 0.12
+}
+
+);
+
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(
+element => observer.observe(element)
+);
+
 
 </script>
 
