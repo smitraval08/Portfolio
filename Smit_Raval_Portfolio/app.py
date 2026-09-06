@@ -5,8 +5,16 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-app = Flask(__name__)
-app.secret_key = os.getenv("SECRET_KEY", "change-this-secret-key")
+app = Flask(
+    __name__,
+    template_folder="templates",
+    static_folder="static"
+)
+
+app.secret_key = os.getenv(
+    "SECRET_KEY",
+    "change-this-secret-key"
+)
 
 
 def get_db():
@@ -28,19 +36,28 @@ def home():
 
 @app.post("/contact")
 def contact():
+
     name = request.form.get("name", "").strip()
     email = request.form.get("email", "").strip()
     subject = request.form.get("subject", "").strip()
     message = request.form.get("message", "").strip()
 
     if not name or not email or not message:
-        flash("Please fill in your name, email and message.", "error")
-        return redirect(url_for("home") + "#contact")
+
+        flash(
+            "Please fill in your name, email and message.",
+            "error"
+        )
+
+        return redirect(
+            url_for("home") + "#contact"
+        )
 
     conn = None
     cursor = None
 
     try:
+
         conn = get_db()
         cursor = conn.cursor()
 
@@ -50,29 +67,50 @@ def contact():
             (name, email, subject, message, created_at)
             VALUES (%s, %s, %s, %s, %s)
             """,
-            (name, email, subject, message, datetime.now())
+            (
+                name,
+                email,
+                subject,
+                message,
+                datetime.now()
+            )
         )
 
         conn.commit()
 
         flash(
-            "Submitted successfully! Thank you for contacting me.",
+            "Message sent successfully. Thank you!",
             "success"
         )
 
-    except Exception as e:
-        print("Database Error:", e)
-        flash("Something went wrong. Please try again.", "error")
+    except Exception as exc:
+
+        app.logger.exception(
+            "Database error: %s",
+            exc
+        )
+
+        flash(
+            "Message could not be sent right now. Please use email instead.",
+            "error"
+        )
 
     finally:
+
         if cursor:
             cursor.close()
 
         if conn:
             conn.close()
 
-    return redirect(url_for("home") + "#contact")
+    return redirect(
+        url_for("home") + "#contact"
+    )
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(
+        host="0.0.0.0",
+        port=int(os.getenv("PORT", 5000)),
+        debug=True
+    )
