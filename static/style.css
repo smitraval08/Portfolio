@@ -1478,3 +1478,151 @@ text-align:center;
 }
 
 }
+
+/* ================================
+   RESUME
+================================ */
+
+.resume-card {
+    margin-top: 30px;
+    padding: 32px;
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(14,32,51,.92), rgba(8,21,34,.78));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.resume-info {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.resume-icon {
+    width: 58px;
+    height: 58px;
+    flex: 0 0 58px;
+    display: grid;
+    place-items: center;
+    border-radius: 16px;
+    background: rgba(116,230,211,.09);
+    border: 1px solid rgba(116,230,211,.20);
+    color: var(--mint);
+    font-size: 28px;
+}
+
+.resume-card h3 {
+    margin: 0 0 7px;
+    font-size: 24px;
+}
+
+.resume-card p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.resume-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn.secondary {
+    background: transparent;
+    border: 1px solid var(--line);
+    color: var(--text);
+}
+
+.btn.secondary:hover {
+    border-color: rgba(116,230,211,.45);
+    color: var(--mint);
+}
+
+
+/* ================================
+   CERTIFICATES
+================================ */
+
+.certificate-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.certificate-card {
+    padding: 16px;
+    border: 1px solid var(--line);
+    border-radius: 22px;
+    background: var(--panel);
+    overflow: hidden;
+    transition: .25s;
+}
+
+.certificate-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(116,230,211,.25);
+}
+
+.certificate-image {
+    width: 100%;
+    aspect-ratio: 16 / 11;
+    object-fit: contain;
+    display: block;
+    border-radius: 14px;
+    background: #06101c;
+}
+
+.certificate-card h3 {
+    margin: 15px 4px 4px;
+    font-size: 18px;
+}
+
+.certificate-card p {
+    margin: 0 4px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+
+/* ================================
+   RESPONSIVE - RESUME / CERTIFICATES
+================================ */
+
+@media (max-width: 900px) {
+    .resume-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .resume-actions {
+        width: 100%;
+    }
+}
+
+@media (max-width: 680px) {
+    .resume-card {
+        padding: 24px;
+    }
+
+    .resume-info {
+        align-items: flex-start;
+    }
+
+    .resume-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .resume-actions .btn {
+        width: 100%;
+    }
+
+    .certificate-grid {
+        grid-template-columns: 1fr;
+    }
+}
