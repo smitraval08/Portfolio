@@ -704,6 +704,46 @@ View GitHub ↗
 </div>
 
 
+<section id="resume" class="section">
+    <div class="section-heading">
+        <span class="eyebrow">MY RESUME</span>
+        <h2>My Resume</h2>
+        <p>
+            Want to know more about my education, skills and experience?
+            Check out my resume.
+        </p>
+    </div>
+
+    <div class="resume-card">
+        <div>
+            <span class="resume-icon">📄</span>
+            <h3>Smit Raval — Resume</h3>
+            <p>
+                Education, technical skills, projects and professional profile.
+            </p>
+        </div>
+
+        <div class="resume-actions">
+            <a
+                href="{{ url_for('static', filename='resume.pdf') }}"
+                target="_blank"
+                class="btn"
+            >
+                View Resume ↗
+            </a>
+
+            <a
+                href="{{ url_for('static', filename='resume.pdf') }}"
+                download="Smit_Raval_Resume.pdf"
+                class="btn secondary"
+            >
+                Download Resume ↓
+            </a>
+        </div>
+    </div>
+</section>
+
+
 
 <!-- FEATURED PROJECT -->
 
